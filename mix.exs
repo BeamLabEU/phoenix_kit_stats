@@ -122,6 +122,9 @@ defmodule PhoenixKitStats.MixProject do
   defp docs do
     [
       main: "PhoenixKitStats",
+      # Tags in this repo are v-prefixed (`git tag -a v0.1.0`), matching phoenix_kit
+      # core and the rest of the umbrella. Tagging a bare version number instead
+      # would 404 every HexDocs source link — keep the two in step.
       source_ref: "v#{@version}"
     ]
   end

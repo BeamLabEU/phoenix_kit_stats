@@ -152,3 +152,41 @@ mix test                                   # All tests (excludes :integration if
 mix test test/groups_test.exs
 mix test test/phoenix_kit_stats/web        # LiveView smoke tests only
 ```
+
+## Versioning & Releases
+
+This module has not been released yet — there are no tags and it is not on Hex.
+
+### Tagging
+
+Tags use a **`v` prefix**, matching `phoenix_kit` core and the rest of the
+umbrella:
+
+```bash
+git tag -a v0.1.0 -m "Release 0.1.0"
+git push origin v0.1.0
+```
+
+This must stay in step with `docs.source_ref` in `mix.exs`, which is
+`"v#{@version}"`. ExDoc bakes that ref into every "Source" link in the
+generated HTML, so a bare tag (`0.1.0`) against a `v`-prefixed ref points at a
+tag that does not exist and 404s every source link on HexDocs — for that
+release, permanently, since fixing `mix.exs` afterwards only affects
+subsequent releases. Ten sibling modules had exactly this defect (2026-07-25);
+verify with:
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" \
+  "https://github.com/BeamLabEU/phoenix_kit_stats/blob/v$(mix run --eval 'IO.puts Mix.Project.config[:version]' 2>/dev/null)/mix.exs"
+```
+
+### Release order
+
+Publish to Hex **before** tagging — never tag a release that failed to publish.
+
+1. Update `@version` in `mix.exs`
+2. Add a `CHANGELOG.md` entry
+3. Run the project's gate; ensure it is clean
+4. Commit and push, and verify the push succeeded
+5. `mix hex.publish --yes`
+6. `git tag -a v<x.y.z> -m "Release <x.y.z>" && git push origin v<x.y.z>`
