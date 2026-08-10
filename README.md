@@ -39,7 +39,7 @@ access control on the wire protocol itself.
 Add to your parent app's `mix.exs`:
 
 ```elixir
-{:phoenix_kit_stats, "~> 0.1.0"}
+{:phoenix_kit_stats, "~> 0.2"}
 ```
 
 Configure where per-group Barograph files are stored (required):

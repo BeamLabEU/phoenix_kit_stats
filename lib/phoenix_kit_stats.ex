@@ -26,7 +26,7 @@ defmodule PhoenixKitStats do
 
   Add to your parent app's `mix.exs`:
 
-      {:phoenix_kit_stats, "~> 0.1.0"}
+      {:phoenix_kit_stats, "~> 0.2"}
 
   Then configure where per-group Barograph files are stored (required):
 
@@ -105,7 +105,7 @@ defmodule PhoenixKitStats do
 
   @impl PhoenixKit.Module
   @doc "Version string. Shown on the admin Modules page."
-  def version, do: "0.1.0"
+  def version, do: "0.2.0"
 
   @impl PhoenixKit.Module
   @doc "Permission metadata for the roles/permissions matrix."
