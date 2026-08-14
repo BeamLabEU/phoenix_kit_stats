@@ -197,17 +197,17 @@ defmodule PhoenixKitStats.Web.GroupShowLive do
             phx-change="update_chart"
             class="flex flex-wrap gap-3 items-end"
           >
-            <div class="form-control">
-              <label class="label"><span class="label-text">{Gettext.gettext(PhoenixKitWeb.Gettext, "Metric")}</span></label>
-              <select name="metric" class="select select-bordered select-sm">
+            <div class="fieldset">
+              <label class="label"><span class="fieldset-legend">{Gettext.gettext(PhoenixKitWeb.Gettext, "Metric")}</span></label>
+              <select name="metric" class="select select-sm">
                 <option :for={name <- @metric_names} value={name} selected={name == @metric}>
                   {name}
                 </option>
               </select>
             </div>
-            <div class="form-control">
-              <label class="label"><span class="label-text">{Gettext.gettext(PhoenixKitWeb.Gettext, "Range")}</span></label>
-              <select name="range" class="select select-bordered select-sm">
+            <div class="fieldset">
+              <label class="label"><span class="fieldset-legend">{Gettext.gettext(PhoenixKitWeb.Gettext, "Range")}</span></label>
+              <select name="range" class="select select-sm">
                 <option
                   :for={{label, value} <- @range_options}
                   value={value}
@@ -217,9 +217,9 @@ defmodule PhoenixKitStats.Web.GroupShowLive do
                 </option>
               </select>
             </div>
-            <div class="form-control">
-              <label class="label"><span class="label-text">{Gettext.gettext(PhoenixKitWeb.Gettext, "Bucket")}</span></label>
-              <select name="bucket" class="select select-bordered select-sm">
+            <div class="fieldset">
+              <label class="label"><span class="fieldset-legend">{Gettext.gettext(PhoenixKitWeb.Gettext, "Bucket")}</span></label>
+              <select name="bucket" class="select select-sm">
                 <option
                   :for={{label, value} <- @bucket_options}
                   value={value}
@@ -229,9 +229,9 @@ defmodule PhoenixKitStats.Web.GroupShowLive do
                 </option>
               </select>
             </div>
-            <div class="form-control">
-              <label class="label"><span class="label-text">{Gettext.gettext(PhoenixKitWeb.Gettext, "Aggregation")}</span></label>
-              <select name="agg" class="select select-bordered select-sm">
+            <div class="fieldset">
+              <label class="label"><span class="fieldset-legend">{Gettext.gettext(PhoenixKitWeb.Gettext, "Aggregation")}</span></label>
+              <select name="agg" class="select select-sm">
                 <option :for={{label, value} <- @agg_options} value={value} selected={value == @agg}>
                   {label}
                 </option>

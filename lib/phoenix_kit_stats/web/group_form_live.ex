@@ -133,7 +133,7 @@ defmodule PhoenixKitStats.Web.GroupFormLive do
                   placeholder="server1"
                   required
                 />
-                <span class="label-text-alt text-base-content/50">
+                <span class="fieldset-label text-base-content/50">
                   {Gettext.gettext(
                     PhoenixKitWeb.Gettext,
                     "Lowercase letters, numbers, underscores, hyphens. Used as the metrics filename — avoid changing it once a collector is configured against it."
@@ -148,7 +148,7 @@ defmodule PhoenixKitStats.Web.GroupFormLive do
                   label={Gettext.gettext(PhoenixKitWeb.Gettext, "Collector Port")}
                   required
                 />
-                <span class="label-text-alt text-base-content/50">
+                <span class="fieldset-label text-base-content/50">
                   {Gettext.gettext(
                     PhoenixKitWeb.Gettext,
                     "The TCP port the collector sends Graphite plaintext lines to. Must be free and reachable from the collector's network — Graphite has no built-in authentication, so restrict access at the firewall/VPN level."
@@ -163,7 +163,7 @@ defmodule PhoenixKitStats.Web.GroupFormLive do
                   label={Gettext.gettext(PhoenixKitWeb.Gettext, "Graphite Template (optional)")}
                   placeholder="*.forklift.metric"
                 />
-                <span class="label-text-alt text-base-content/50">
+                <span class="fieldset-label text-base-content/50">
                   {Gettext.gettext(
                     PhoenixKitWeb.Gettext,
                     "Splits dotted metric paths into labels. Leave blank if the collector uses tag syntax (metric;label=value) or sends bare metric names."
