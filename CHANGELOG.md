@@ -1,3 +1,19 @@
+## 0.2.2 - 2026-10-24
+
+### Fixed
+
+- Field labels on the group form and the group page's Metric/Range pickers
+  rendered at 60% opacity because they used daisyUI 4 classes
+  (`form-control`, `label-text`, `label-text-alt`, `select-bordered`) that do
+  not exist in daisyUI 5. They now use the v5 equivalents (`fieldset`,
+  `fieldset-legend`, `fieldset-label`; v5 selects are bordered by default).
+- HexDocs "source" links pointed at a `v`-prefixed tag that this repo never
+  creates; they now point at the release tag.
+
+### Changed
+
+- Dependency refresh: `phoenix_kit` 2.64.1 and its transitive set.
+
 ## 0.2.1 - 2026-08-11
 
 ### Changed

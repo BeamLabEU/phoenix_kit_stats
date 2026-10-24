@@ -1,7 +1,7 @@
 defmodule PhoenixKitStats.MixProject do
   use Mix.Project
 
-  @version "0.2.1"
+  @version "0.2.2"
   @source_url "https://github.com/BeamLabEU/phoenix_kit_stats"
 
   def project do
@@ -125,7 +125,7 @@ defmodule PhoenixKitStats.MixProject do
       # Tags in this repo are v-prefixed (`git tag -a v0.1.0`), matching phoenix_kit
       # core and the rest of the umbrella. Tagging a bare version number instead
       # would 404 every HexDocs source link — keep the two in step.
-      source_ref: "v#{@version}"
+      source_ref: "#{@version}"
     ]
   end
 end
