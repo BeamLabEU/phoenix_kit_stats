@@ -85,7 +85,7 @@ defmodule PhoenixKitStats.MixProject do
   defp deps do
     [
       # PhoenixKit provides the Module behaviour and Settings API.
-      pk_dep(:phoenix_kit, "~> 2.0"),
+      pk_dep(:phoenix_kit, ">= 2.0.0 and < 4.0.0"),
 
       # LiveView is needed for the admin pages.
       {:phoenix_live_view, "~> 1.1"},
