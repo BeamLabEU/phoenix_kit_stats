@@ -30,7 +30,7 @@ mix precommit               # compile + format + credo --strict + dialyzer
 This is a **library** (not a standalone Phoenix app) — no `config/` endpoint
 or router of its own.
 
-- `phoenix_kit` (`~> 1.7.189`) — Module behaviour, Settings, RepoHelper, Activity, Dashboard tabs
+- `phoenix_kit` (`>= 3.5.0 and < 4.0.0`) — Module behaviour, Settings, RepoHelper, Activity, Dashboard tabs
 - `phoenix_live_view` — admin LiveViews
 - `barograph` (`~> 0.2`) — time-series storage/query/SVG chart engine
 - `thousand_island` (`~> 1.5`) — Graphite TCP listener transport (required here, not optional — the Graphite ingest path is core to v1)
